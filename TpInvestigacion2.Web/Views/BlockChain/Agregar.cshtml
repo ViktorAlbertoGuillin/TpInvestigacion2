@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Agregar";
+}
+
+<h1>Agregar</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="BlockChain" asp-action="AgregarBloque">
+            
+            
+            <div class="form-group">
+                <label name="Dato" class="control-label">Ingresa dato</label>
+                <input name="Dato" class="form-control" placeholder="Lote 34 Elaboracion 05/23 Vencimiento 06/24" />
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<a href="/Home/Index/" class="btn btn-primary">Volver</a>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
+

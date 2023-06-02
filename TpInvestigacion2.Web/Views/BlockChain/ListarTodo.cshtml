@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TpInvestigacion.Data.Entidades.Bloque>
+
+@{
+    ViewData["Title"] = "ListarTodo";
+}
+
+<h1>Listado de registros</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Datos</label>
+            </th>
+            <th>
+                <label>Hash</label>
+            </th>
+            <th>
+                <label>Hash Anterior</label>
+            </th>
+            <th>
+                <label>Fecha y Hora de creacion</label>
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HashAnterior)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tiempo)
+            </td>
+                <td>
+                    <a href="/BlockChain/Editar/@item.Id">Editar</a> |
+                    <a href="/BlockChain/Eliminar/@item.Id">Eliminar</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+<a asp-controller="BlockChain" asp-action="DefinirIntegridad" class="btn btn-primary">Analizar la integridad</a>
+<a asp-controller="BlockChain" asp-action="Agregar" class="btn btn-primary">Agregar</a>
+<br />
+<br />
+<a href="/Home/Index/" class="btn btn-primary">Volver</a>

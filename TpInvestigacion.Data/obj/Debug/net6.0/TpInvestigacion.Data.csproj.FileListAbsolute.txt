@@ -1,0 +1,14 @@
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\bin\Debug\net6.0\TpInvestigacion.Data.deps.json
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\bin\Debug\net6.0\TpInvestigacion.Data.runtimeconfig.json
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\bin\Debug\net6.0\TpInvestigacion.Data.dll
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\bin\Debug\net6.0\TpInvestigacion.Data.pdb
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\obj\Debug\net6.0\TpInvestigacion.Data.csproj.AssemblyReference.cache
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\obj\Debug\net6.0\TpInvestigacion.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\obj\Debug\net6.0\TpInvestigacion.Data.AssemblyInfoInputs.cache
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\obj\Debug\net6.0\TpInvestigacion.Data.AssemblyInfo.cs
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\obj\Debug\net6.0\TpInvestigacion.Data.csproj.CoreCompileInputs.cache
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\obj\Debug\net6.0\TpInvestigacion.Data.dll
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\obj\Debug\net6.0\refint\TpInvestigacion.Data.dll
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\obj\Debug\net6.0\TpInvestigacion.Data.pdb
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\obj\Debug\net6.0\TpInvestigacion.Data.genruntimeconfig.cache
+C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion.Data\obj\Debug\net6.0\ref\TpInvestigacion.Data.dll

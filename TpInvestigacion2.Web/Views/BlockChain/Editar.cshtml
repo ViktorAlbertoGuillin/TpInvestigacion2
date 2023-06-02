@@ -1,0 +1,49 @@
+﻿@model TpInvestigacion.Data.Entidades.Bloque
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+
+<h4>Bloque</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Editar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Datos" class="control-label">Dato</label>
+                <input asp-for="Datos" class="form-control" />
+                <span asp-validation-for="Datos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hash" class="control-label">Hash</label>
+                <input asp-for="Hash" class="form-control" />
+                <span asp-validation-for="Hash" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HashAnterior" class="control-label">Hash Anterior</label>
+                <input asp-for="HashAnterior" class="form-control" />
+                <span asp-validation-for="HashAnterior" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tiempo" class="control-label">Fecha y Hora de creacion</label>
+                <input asp-for="Tiempo" class="form-control" />
+                <span asp-validation-for="Tiempo" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <a href="/BlockChain/ListarTodo/" class="btn btn-primary">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
