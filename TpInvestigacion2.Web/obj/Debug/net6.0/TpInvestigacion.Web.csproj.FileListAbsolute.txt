@@ -14,11 +14,6 @@ C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion2.Web\obj\Debug\net6.0\TpInve
 C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion2.Web\obj\Debug\net6.0\TpInvestigacion.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion2.Web\obj\Debug\net6.0\TpInvestigacion.Web.RazorAssemblyInfo.cache
 C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion2.Web\obj\Debug\net6.0\TpInvestigacion.Web.RazorAssemblyInfo.cs
-C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion2.Web\obj\Debug\net6.0\staticwebassets\msbuild.TpInvestigacion.Web.Microsoft.AspNetCore.StaticWebAssets.props
-C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion2.Web\obj\Debug\net6.0\staticwebassets\msbuild.build.TpInvestigacion.Web.props
-C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion2.Web\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TpInvestigacion.Web.props
-C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion2.Web\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TpInvestigacion.Web.props
-C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion2.Web\obj\Debug\net6.0\staticwebassets.pack.json
 C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion2.Web\obj\Debug\net6.0\staticwebassets.build.json
 C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion2.Web\obj\Debug\net6.0\staticwebassets.development.json
 C:\proyectosCSharp\TpInvestigacion2\TpInvestigacion2.Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css

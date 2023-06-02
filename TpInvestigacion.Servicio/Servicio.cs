@@ -73,7 +73,13 @@ namespace TpInvestigacion.Servicio
             List<Bloque> listaDatos = _repositorio.ListarTodo();
             for (int i = 0; i < listaDatos.Count; i++)
             {
+                int IdActual = 0;
+                int IdAnterior = 0;
+
                 Bloque bloque = listaDatos[i];
+                Bloque bloqueAnterior = listaDatos[i - 1];
+                
+
                 if (i == 0)
                 {
                     if (bloque.HashAnterior != "0")
@@ -84,14 +90,20 @@ namespace TpInvestigacion.Servicio
                 }
                 else
                 {
-                    Bloque bloqueAnterior = listaDatos[i - 1];
+                    
+                    IdAnterior = bloqueAnterior.Id;
                     if (bloque.HashAnterior != bloqueAnterior.Hash)
                     {
                         return "Falta al menos un bloque de informacion";
                     }
                     
                 }
-                
+                string hashActual = CalcularHash(bloque.Id + bloque.Datos + bloque.Tiempo + bloque.HashAnterior);
+                string hashAnterior = CalcularHash(bloqueAnterior.Id + bloqueAnterior.Datos + bloqueAnterior.Tiempo + bloqueAnterior.HashAnterior);
+                if (hashActual != hashAnterior)
+                {
+                    return "Al menos un bloque de informacion fue alterado, el hash almacenado no coincide con la informacion del bloque";
+                }
 
             }
             return "La cadena de bloque se encuentra completa y su contenido no fue alterado";

@@ -10457,24 +10457,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Casa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\proyectosCSharp\\TpInvestigacion2\\TpInvestigacion2.Web\\TpInvestigacion.Web.csproj",
+      "projectUniqueName": "C:\\ProyectosCSharp\\TpInvestigacion2\\TpInvestigacion2.Web\\TpInvestigacion.Web.csproj",
       "projectName": "TpInvestigacion.Web",
-      "projectPath": "C:\\proyectosCSharp\\TpInvestigacion2\\TpInvestigacion2.Web\\TpInvestigacion.Web.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\proyectosCSharp\\TpInvestigacion2\\TpInvestigacion2.Web\\obj\\",
+      "projectPath": "C:\\ProyectosCSharp\\TpInvestigacion2\\TpInvestigacion2.Web\\TpInvestigacion.Web.csproj",
+      "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
+      "outputPath": "C:\\ProyectosCSharp\\TpInvestigacion2\\TpInvestigacion2.Web\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10482,18 +10477,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\proyectosCSharp\\TpInvestigacion2\\TpInvestigacion.Data\\TpInvestigacion.Data.csproj": {
-              "projectPath": "C:\\proyectosCSharp\\TpInvestigacion2\\TpInvestigacion.Data\\TpInvestigacion.Data.csproj"
+            "C:\\ProyectosCSharp\\TpInvestigacion2\\TpInvestigacion.Data\\TpInvestigacion.Data.csproj": {
+              "projectPath": "C:\\ProyectosCSharp\\TpInvestigacion2\\TpInvestigacion.Data\\TpInvestigacion.Data.csproj"
             },
-            "C:\\proyectosCSharp\\TpInvestigacion2\\TpInvestigacion.Servicio\\TpInvestigacion.Servicio.csproj": {
-              "projectPath": "C:\\proyectosCSharp\\TpInvestigacion2\\TpInvestigacion.Servicio\\TpInvestigacion.Servicio.csproj"
+            "C:\\ProyectosCSharp\\TpInvestigacion2\\TpInvestigacion.Servicio\\TpInvestigacion.Servicio.csproj": {
+              "projectPath": "C:\\ProyectosCSharp\\TpInvestigacion2\\TpInvestigacion.Servicio\\TpInvestigacion.Servicio.csproj"
             }
           }
         }
@@ -10538,7 +10532,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
