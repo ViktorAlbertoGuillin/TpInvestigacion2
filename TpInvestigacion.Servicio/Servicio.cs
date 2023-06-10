@@ -14,7 +14,7 @@ namespace TpInvestigacion.Servicio
     {
         readonly IRepositorio _repositorio;
 
-        public Servicio(IRepositorio repositorio)    // importantisimo tener este constructor para enlazar con el repositorio
+        public Servicio(IRepositorio repositorio)   
         {
             _repositorio = repositorio;
         }
@@ -37,7 +37,7 @@ namespace TpInvestigacion.Servicio
         {
             Bloque bloque = new Bloque();
             bloque.Datos = dato;
-            bloque.Tiempo = DateTime.Now.Date;
+            bloque.Tiempo = DateTime.Now;
 
             if (_repositorio.ContadorBloques() == 0)
             {
@@ -48,7 +48,8 @@ namespace TpInvestigacion.Servicio
                 var ultimoBloque = _repositorio.UltimoBloque();
                 bloque.HashAnterior = ultimoBloque.Hash;
             }
-            bloque.Hash = CalcularHash(bloque.Id + bloque.Datos + bloque.Tiempo + bloque.HashAnterior);
+            string palabraConcatenada = bloque.Datos + bloque.HashAnterior + bloque.Tiempo;
+            bloque.Hash = CalcularHash( palabraConcatenada);
             _repositorio.GuardarBloque(bloque);
         }
 
@@ -71,42 +72,58 @@ namespace TpInvestigacion.Servicio
         {
             string hash = null;
             List<Bloque> listaDatos = _repositorio.ListarTodo();
-            for (int i = 0; i < listaDatos.Count; i++)
+            int i = 0;
+            while (i< listaDatos.Count)
             {
+                
                 int IdActual = 0;
                 int IdAnterior = 0;
-
-                Bloque bloque = listaDatos[i];
-                Bloque bloqueAnterior = listaDatos[i - 1];
-                
-
-                if (i == 0)
+                int indiceAnterior = 0;
+                if(listaDatos[i] != null) 
                 {
-                    if (bloque.HashAnterior != "0")
+                    indiceAnterior = i - 1;
+                    Bloque bloque = listaDatos[i];
+                    if (!HashIntacto(bloque)) 
                     {
-                        return "Falta el bloque de informacion inicial ";
+                        return "Al menos un bloque de informacion fue alterado, el hash almacenado no coincide con la informacion del bloque";
                     }
-                    
+                    if( i == 0 )
+                    {
+                        if (bloque.HashAnterior != "0")
+                        {
+                            return "Falta el bloque de informacion inicial ";
+                        }   
+                    }
+                    else
+                    {
+                        Bloque bloqueAnterior = listaDatos[indiceAnterior];
+                        if (bloque.HashAnterior != bloqueAnterior.Hash)
+                        {
+                            return "Falta al menos un bloque de informacion";
+                        }
+                    }
                 }
                 else
                 {
-                    
-                    IdAnterior = bloqueAnterior.Id;
-                    if (bloque.HashAnterior != bloqueAnterior.Hash)
-                    {
-                        return "Falta al menos un bloque de informacion";
-                    }
-                    
+                    return "La lista esta vacia";
                 }
-                string hashActual = CalcularHash(bloque.Id + bloque.Datos + bloque.Tiempo + bloque.HashAnterior);
-                string hashAnterior = CalcularHash(bloqueAnterior.Id + bloqueAnterior.Datos + bloqueAnterior.Tiempo + bloqueAnterior.HashAnterior);
-                if (hashActual != hashAnterior)
-                {
-                    return "Al menos un bloque de informacion fue alterado, el hash almacenado no coincide con la informacion del bloque";
-                }
-
+                i++;
             }
             return "La cadena de bloque se encuentra completa y su contenido no fue alterado";
+        }
+        private Boolean HashIntacto(Bloque bloque)
+        {
+            string palabraConcatenada = bloque.Datos + bloque.HashAnterior + bloque.Tiempo;
+            string hashCalculado= CalcularHash(palabraConcatenada);
+            if (hashCalculado.Equals(bloque.Hash))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
     }
 }

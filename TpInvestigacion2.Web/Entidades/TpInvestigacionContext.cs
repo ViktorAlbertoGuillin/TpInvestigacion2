@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace TpInvestigacion.Data.Entidades
+namespace TpInvestigacion.Web.Entidades
 {
     public partial class TpInvestigacionContext : DbContext
     {
@@ -43,10 +43,9 @@ namespace TpInvestigacion.Data.Entidades
 
                 entity.Property(e => e.HashAnterior)
                     .HasMaxLength(255)
-                    .IsUnicode(false)
-                    .HasColumnName("HashAnterior");
+                    .IsUnicode(false);
 
-                entity.Property(e => e.Tiempo).HasColumnType("DateTime");
+                entity.Property(e => e.Tiempo).HasColumnType("datetime");
             });
 
             OnModelCreatingPartial(modelBuilder);

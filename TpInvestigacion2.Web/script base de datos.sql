@@ -11,12 +11,12 @@ CREATE TABLE Bloque (
     Id INT IDENTITY(1,1) PRIMARY KEY,
     Datos VARCHAR(255),
     Hash VARCHAR(255),
-    Hash_anterior VARCHAR(255),
-    Tiempo Date,
+    HashAnterior VARCHAR(255),
+    Tiempo dateTime,
     Integro BIT
 );
 
-select * from Bloque
+select * from Bloque;
 
 drop database TpInvestigacion
 
